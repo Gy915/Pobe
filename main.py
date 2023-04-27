@@ -9,9 +9,9 @@ warnings.filterwarnings("ignore")
 
 
 def main():
-    dataset = "clinc"
+    dataset = "imdb"
     parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset", type=str, default="clinc")
+    parser.add_argument("--dataset", type=str, default="imdb")
     parser.add_argument("--epoch", type=int, default=20)
     parser.add_argument("--batch", type=int, default=4)
     parser.add_argument("--train_path", type=str, default="./dataset/{}/{}_train_gpt.txt".format(dataset, dataset))

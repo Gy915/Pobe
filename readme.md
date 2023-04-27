@@ -1,6 +1,31 @@
-目前的代码以CLINC为例，其他数据集类似,首先运行main.py，接着运行pobe.py
-* main.py: finetune数据集，构建KNN索引，关键参数如下：
-  1. pretrained_path: 预训练模型地址
-  2. model_prefix: finetune后模型地址前缀
-  3. database_prefix: KNN索引地址，构建后包含index_path, token_path.   
-* pobe.py: Pobe OOD计算，将构建的KNN索引地址填入config/pobe.yaml的index_path, token_path即可,默认K=1024
+# Pobe(On going...)
+
+## DATA
+
+data can be found in `.\dataset`
+
+## Requirements
+
+* PyTorch == 1.8.1
+* transformers == 4.17.0
+* faiss-gpu == 1.7.2
+* python >= 3.7
+
+## Usage
+
+Take **IMDB-CLINC**  pair as example. 
+
+* Finetuning Stage
+
+```shell
+python main.py --dataset IMDB
+```
+
+​	After finetuning, put `index_path`,  `token_prefix` in the crossponding position in `config/pobe.yaml`.
+
+* Inference Stage
+
+```shell
+python Pobe.py --K 1024
+```
+

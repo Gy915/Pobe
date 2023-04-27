@@ -1,0 +1,21 @@
+data_root: "/data1/gaoy/KNNLM-data/"
+type: "record"
+model_type: "gpt"
+model_path: "./ckpts/imdn_final"
+benchmark: "imdb"
+index_path: "/data1/gaoy/KNNLM-data/database/imdb_300_IVF_final.index"
+tokens_path: "/data1/gaoy/KNNLM-data/database/imdb_300_tokens_final.npy"
+gpu_model: "cuda:2"
+gpu_knn_list: [0, 7]
+id_path: "./dataset/imdb/imdb_test_gpt.txt"
+ood_path: "./dataset/clinc/clinc_test_gpt.txt"
+save_path: "./result/"
+pretrained_path: "./pretrained/gpt2"
+k: 1024
+
+
+
+
+
+
+
